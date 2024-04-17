@@ -1,3 +1,6 @@
+-- Custom stuff not from kickstartnvim
+vim.g.gruvbox_flat_style = "hard"
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -20,6 +23,10 @@ vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
+
+-- Change TAB indentation length
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -659,13 +666,13 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
+    'eddyekofo94/gruvbox-flat.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'gruvbox-flat'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
