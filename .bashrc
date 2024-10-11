@@ -116,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Personal Customization
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(oh-my-posh init bash --config ~/.themesomp/pure.omp.json)"
 
 # Start tmux on every shell login and check:
 # 1. tmux exits on the system
@@ -127,3 +124,7 @@ eval "$(oh-my-posh init bash --config ~/.themesomp/pure.omp.json)"
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
+
+# Personal Customization
+# WSL:
+eval "$(/home/kokoro/.local/bin/oh-my-posh init bash --config ~/dotfiles/.config/pure.omp.json)"
