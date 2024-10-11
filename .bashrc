@@ -117,8 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 # Personal Customization
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-eval "$(oh-my-posh init bash --config ~/.themesomp/pure.omp.json)"
+eval "$(oh-my-posh init bash --config ~/dotfiles/.config/pure.omp.json)"
 
 # Start tmux on every shell login and check:
 # 1. tmux exits on the system
