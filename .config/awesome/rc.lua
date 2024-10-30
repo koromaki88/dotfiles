@@ -63,30 +63,6 @@ editor_cmd = terminal .. " -e " .. editor
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
--- Deficient widgets
-local deficient = require("deficient")
-
-local battery_widget = deficient.battery_widget {
-    ac = "AC",
-    adapter = "BAT0",
-    ac_prefix = "AC: ",
-    battery_prefix = "Bat: ",
-    percent_colors = {
-        { 25,  "red" },
-        { 50,  "orange" },
-        { 999, "green" },
-    },
-    listen = true,
-    timeout = 10,
-    widget_text = "${AC_BAT}${color_on}${percent}%${color_off}",
-    widget_font = "Sans 8",
-    tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
-    alert_threshold = 5,
-    alert_timeout = 0,
-    alert_title = "Low battery!",
-    alert_text = "${AC_BAT}${time_est}",
-    warn_full_battery = true,
-}
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.spiral,
