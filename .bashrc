@@ -124,7 +124,3 @@ fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
-
-# Personal Customization
-# WSL:
-eval "$(/home/kokoro/.local/bin/oh-my-posh init bash --config ~/dotfiles/.config/pure.omp.json)"
