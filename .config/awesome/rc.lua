@@ -14,6 +14,32 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local deficient = require("deficient")
+
+local battery_widget = deficient.battery_widget({
+	ac = "AC",
+	adapter = "BAT0",
+	ac_prefix = "AC: ",
+	percent_colors = {
+		{ 25, "red" },
+		{ 50, "orange" },
+		{ 999, "green" },
+	},
+	listen = true,
+	timeout = 10,
+	widget_text = "${AC_BAT}${color_on}${percent}%${color_off}",
+	tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
+	alert_threshold = 10,
+	alert_timeout = 0,
+	alert_title = "Low battery !",
+	alert_text = "${AC_BAT}${time_est}",
+	warn_full_battery = true,
+})
+
+local brightness_ctrl = deficient.brightness({})
+local calendar_widget = deficient.calendar({})
+local volumecfg = deficient.volume_control({})
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -52,6 +78,8 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "default")
+beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -239,8 +267,11 @@ awful.screen.connect_for_each_screen(function(s)
 		s.mytasklist, -- Middle widget
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
+			spacing = 10,
 			mykeyboardlayout,
 			wibox.widget.systray(),
+			volumecfg.widget,
+			brightness_ctrl.widget,
 			battery_widget,
 			mytextclock,
 			s.mylayoutbox,
@@ -248,6 +279,8 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 end)
 -- }}}
+
+calendar_widget:attach(mytextclock)
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
@@ -350,9 +383,18 @@ globalkeys = gears.table.join(
 		})
 	end, { description = "lua execute prompt", group = "awesome" }),
 	-- Menubar
-	awful.key({ modkey }, "p", function()
+	awful.key({ modkey, "Shift" }, "p", function()
 		menubar.show()
-	end, { description = "show the menubar", group = "launcher" })
+	end, { description = "show the menubar", group = "launcher" }),
+	-- Rofi
+	awful.key({ modkey }, "p", function()
+		os.execute("~/.config/rofi/scripts/launcher_t4")
+		-- awful.spawn("rofi -show drun")
+	end, { description = "open rofi launcher", group = "launcher" }),
+	-- Utilities
+	awful.key({}, "Print", function()
+		awful.spawn("flameshot gui")
+	end, { description = "take screenshot (flameshot)", group = "utilities" })
 )
 
 clientkeys = gears.table.join(
@@ -586,4 +628,5 @@ end)
 -- }}}
 
 -- Autostart Applications
+awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("nitrogen --restore")
