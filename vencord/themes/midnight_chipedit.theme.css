@@ -3,8 +3,7 @@
  * @description A dark, rounded discord theme. Based on Vencord's colour palette. (https://vencord.dev/)
  * @author refact0r, esme, anubis
  * @version 1.6.2
- * @invite nz87hXyvcy
- * @website https://github.com/refact0r/midnight-discord
+ * @invite nz87hXyvcy @website https://github.com/refact0r/midnight-discord
  * @source https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-vencord.theme.css
  * @authorId 508863359777505290
  * @authorLink https://www.refact0r.dev
@@ -77,7 +76,7 @@
 
 	/* direct messages moon icon */
 	/* change to block to show, none to hide */
-	--discord-icon: none; /* discord icon */
+	--discord-icon: block; /* discord icon */
 	--moon-icon: none; /* moon icon */
 	--moon-icon-url: none;
 	--moon-icon-size: cover;
@@ -87,12 +86,4 @@
 	--login-bg-filter: none; /* login background artwork */
 	--green-to-accent-3-filter: none; /* add friend page explore icon */
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
-}
-
-.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
-	background-image: url('https://chipperonio.s-ul.eu/9RegQhZK');
-	background-color: transparent !important;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
 }
