@@ -33,9 +33,13 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+# Automatically set orientation for monitors (very specific to each setup)
 exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
 exec sleep 1s
+
 exec --no-startup-id nitrogen --restore
+
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -50,6 +54,9 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier
+
+# flameshot
+bindsym Print exec flameshot gui
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
