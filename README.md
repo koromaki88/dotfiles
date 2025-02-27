@@ -3,7 +3,7 @@ Self-explanatory
 
 Basic info:
 - Arch
-- AwesomeWM/X11
+- AwesomeWM/i3 (careful with i3 since I didn't comment out xrandr script)
 - bash
 - Firefox
 - Alacritty
