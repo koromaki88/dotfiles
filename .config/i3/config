@@ -36,7 +36,7 @@ exec --no-startup-id nm-applet
 
 # Automatically set orientation for monitors (very specific to each setup)
 exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
-exec sleep 2s
+exec sleep 3s
 
 exec --no-startup-id nitrogen --restore
 
