@@ -124,3 +124,6 @@ fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
+
+alias fzf-nv='find ~ | nvim $(fzf --preview="bat --color=always {}")' # fzf + nvim interactive
+alias fzf-tn='thunar $(dirname "$(find ~ | fzf)")' # fzf + thunar
