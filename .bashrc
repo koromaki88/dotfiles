@@ -127,3 +127,4 @@ fi
 
 alias fzf-nv='find ~ | nvim $(fzf --preview="bat --color=always {}")' # fzf + nvim interactive
 alias fzf-tn='thunar $(dirname "$(find ~ | fzf)")' # fzf + thunar
+alias fzf-cd='selected=$(find ~ | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi'
