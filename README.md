@@ -2,11 +2,11 @@
 Self-explanatory
 
 Basic info:
-- Arch
-- AwesomeWM/i3 (careful with i3 since I didn't comment out xrandr script)
+- Arch Linux
+- [AwesomeWM](https://github.com/deficient/deficient)/[i3(blocks)](https://github.com/a-schaefers/i3-wm-gruvbox-theme)
 - bash
 - Firefox
 - Alacritty
-- Neovim
+- [Neovim](https://github.com/nvim-lua/kickstart.nvim)
 
 For SDDM theme `sugar-candy` move into `/usr/share/sddm/themes/` and change `[Theme]` in `/etc/sddm.conf`
