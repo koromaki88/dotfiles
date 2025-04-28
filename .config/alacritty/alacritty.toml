@@ -4,4 +4,4 @@ import = [
 ]
 
 [font]
-normal = { family = "HackNerdFont", style = "Regular" }
+normal = { family = "IosevkaNerdFont", style = "Regular" }

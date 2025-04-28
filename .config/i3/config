@@ -35,8 +35,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 
 # Automatically set orientation for monitors (very specific to each setup)
-# exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
-# exec sleep 3s
+exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
+exec sleep 3s
 
 exec --no-startup-id nitrogen --restore
 
@@ -213,7 +213,7 @@ set $white #fbf1c7
 bar {
     position top
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    font pango:HackNerdFont 12px
+    font pango:IosevkaNerdFont 13px
     colors {
         # bar background color
         background $bg
