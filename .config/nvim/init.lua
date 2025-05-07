@@ -447,6 +447,8 @@ require("lazy").setup({
 				ts_ls = {},
 				cssls = {},
 				html = {},
+				basedpyright = {},
+				tailwindcss = {},
 
 				-- gopls = {},
 				-- pyright = {},
