@@ -7,18 +7,24 @@ config.bind(',n', 'config-cycle colors.webpage.darkmode.enabled')       # use ',
 config.bind(',v', 'config-cycle tabs.show always never')                # use ',v' to show/hide vertical tabs
 
 # ========== QOL ============
-c.auto_save.session = True
+c.auto_save.session = True              # save tabs on quit/restart
 c.input.insert_mode.auto_load = True
 
 c.url.default_page = "https://www.google.com"
 c.url.start_pages = "https://www.google.com"
-c.url.searchengines = {"DEFAULT": "https://www.google.com/search?hl=en&q={}"}
+c.url.searchengines = {
+    "DEFAULT": "https://www.google.com/search?hl=en&q={}",
+    "!aw": "https://wiki.archlinux.org/?search={}",
+    "!apkg": "https://archlinux.org/packages/?sort=&q={}&maintainer=&flagged=",
+    "!gh": "https://github.com/search?o=desc&q={}&s=stars",
+    "!yt": "https://www.youtube.com/results?search_query={}",
+}
 
 c.content.blocking.method = "both"          # preferably install python-adblock for brave adblocking
 
 # ========== MISC ===========
 c.fonts.default_family = 'IosevkaNerdFont'
-c.completion.web_history.max_items = 0      # exclude history from url completions
+c.completion.show = 'auto'                  # only show completion on 'Tab'
 c.downloads.position = 'bottom'
 
 # ========== TABS ===========
