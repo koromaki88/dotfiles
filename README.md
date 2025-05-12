@@ -4,8 +4,8 @@ Self-explanatory
 Basic info:
 - Arch Linux
 - [AwesomeWM](https://github.com/deficient/deficient)/[i3(blocks)](https://github.com/a-schaefers/i3-wm-gruvbox-theme)
-- bash
-- Firefox
+- zsh
+- Firefox/Brave/qutebrowser
 - Alacritty
 - [Neovim](https://github.com/nvim-lua/kickstart.nvim)
 
