@@ -9,6 +9,7 @@ config.bind(',v', 'config-cycle tabs.show always never')                # use ',
 # ========== QOL ============
 c.auto_save.session = True              # save tabs on quit/restart
 c.input.insert_mode.auto_load = True
+c.input.insert_mode.auto_leave = False
 
 c.url.default_page = "https://www.google.com"
 c.url.start_pages = "https://www.google.com"
