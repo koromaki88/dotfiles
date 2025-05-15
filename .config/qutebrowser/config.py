@@ -2,6 +2,7 @@ config.load_autoconfig()
 
 # ========= KEYBIND =========
 config.unbind("d")
+config.unbind("D")
 config.bind("dd", "tab-close")
 config.bind(',n', 'config-cycle colors.webpage.darkmode.enabled')       # use ',n' to enable/disable force dark mode
 config.bind(',v', 'config-cycle tabs.show always never')                # use ',v' to show/hide vertical tabs
