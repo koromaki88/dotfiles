@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# get the current window's tree and extract the layout
+MODE=$(i3-msg -t get_tree | jq -r 'recurse(.nodes[];.nodes!=null)|select(.nodes[].focused).layout')
+
+# map the layout to a display string
+case "$MODE" in
+    "splith"|"splitv") echo "default" ;;
+    "stacked") echo "stacking" ;;
+    "tabbed") echo "tabbed" ;;
+    *) echo "unknown" ;;
+esac
