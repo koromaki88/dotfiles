@@ -25,6 +25,7 @@ c.url.searchengines = {
 c.content.blocking.method = "both"          # preferably install python-adblock for brave adblocking
 
 # ========== MISC ===========
+c.scrolling.bar = 'always'
 c.fonts.default_family = 'IosevkaNerdFont'
 c.completion.show = 'auto'                  # only show completion on 'Tab'
 c.downloads.position = 'bottom'
