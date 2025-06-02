@@ -55,7 +55,7 @@ floating_modifier $mod
 tiling_drag modifier
 
 # flameshot
-bindsym Print exec ~/scripts/flameshot_date_subdir.sh
+bindsym Print exec "~/.local/bin/flameshot_date_subdir"
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
