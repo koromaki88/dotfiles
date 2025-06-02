@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo paccache -rk1 && sudo paccache -ruk0 && paru -Sca
