@@ -747,6 +747,16 @@ require("lazy").setup({
 		end,
 	},
 	{
+		"catgoose/nvim-colorizer.lua",
+		event = "BufReadPre",
+		opts = {
+			user_default_options = {
+				names = false,
+				tailwind = true,
+			},
+		},
+	},
+	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
