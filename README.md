@@ -11,4 +11,4 @@ Basic info:
 
 For `~/scripts/`: Make symlinks using `cp -Rs path/to/scripts/ ~/.local/bin/` (or whatever preferred).
 
-For SDDM theme `sugar-candy` move into `/usr/share/sddm/themes/` and change `[Theme]` in `/etc/sddm.conf`
+For SDDM theme `sddm-eucalyptus-drop` move into `/usr/share/sddm/themes/` and change `[Theme]` in `/etc/sddm.conf.d/default.conf` (cp from `/usr/lib/sddm/sddm.conf.d/default.conf` if doesn't already exist). On Arch, install qt6-5compat for dependencies
