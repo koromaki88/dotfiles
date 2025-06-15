@@ -4,7 +4,7 @@ Self-explanatory
 Basic info:
 - Arch Linux
 - [AwesomeWM](https://github.com/deficient/deficient)/[i3(blocks)](https://github.com/a-schaefers/i3-wm-gruvbox-theme)
-- zsh
+- zsh w/ manual p10k install, tmux. Plugins: zsh-autosuggestions & zsh-syntax-highlighting
 - Firefox/Brave/qutebrowser
 - Alacritty
 - [Neovim](https://github.com/nvim-lua/kickstart.nvim)
