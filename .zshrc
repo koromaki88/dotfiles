@@ -9,6 +9,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# zsh built-in autocomplete
+autoload -Uz compinit
+compinit
+
+# pacman -S zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
+
 # ~/.zshrc: executed by zsh for non-login shells.
 #
 # If not running interactively, don't do anything
@@ -82,3 +90,5 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /home/teio/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=/home/teio/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/teio/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+eval $(keychain --eval --quiet ~/.ssh/gh_desktop)
