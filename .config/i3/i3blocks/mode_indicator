@@ -1,13 +1,12 @@
 #!/bin/bash
 
 get_layout() {
-    # get the current window's tree and extract the layout
+    # get the current window's layout
     MODE=$(i3-msg -t get_tree | jq -r 'recurse(.nodes[];.nodes!=null)|select(.nodes[].focused).layout')
     
-    # map the layout to a display string
     case "$MODE" in
-        "splith"|"splitv") echo "default" ;;
-        "stacked") echo "stacking" ;;
+        "splith"|"splitv") echo "split" ;;
+        "stacked") echo "stack" ;;
         "tabbed") echo "tabbed" ;;
         *) echo "unknown" ;;
     esac
@@ -15,7 +14,7 @@ get_layout() {
 
 get_layout
 
-i3-msg -t subscribe -m '[ "workspace", "binding" ]' | jq -r --unbuffered '
+i3-msg -t subscribe -m '["binding", "window" ]' | jq -r --unbuffered '
     if .change == "focus" then "update"
     elif (.binding? // {} | .command | contains("layout")) then "update"
     else empty end
