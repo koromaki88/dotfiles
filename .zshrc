@@ -72,8 +72,6 @@ alias fzf-nva='find ~ | nvim $(fzf --preview="bat --color=always {}")' # fzf + n
 alias fzf-tna='thunar $(dirname "$(find ~ | fzf)")' # fzf + thunar
 alias fzf-cda='selected=$(find ~ | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi' # fzf cd
 
-alias code-jpt='code --enable-proposed-api ms-toolsai.jupyter'
-
 # Load aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
