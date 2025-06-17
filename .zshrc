@@ -64,6 +64,16 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+alias fzf-nv='find . | nvim $(fzf --preview="bat --color=always {}")' # fzf + nvim interactive
+alias fzf-tn='thunar $(dirname "$(find . | fzf)")' # fzf + thunar
+alias fzf-cd='selected=$(find . | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi' # fzf cd
+# Search all in user
+alias fzf-nva='find ~ | nvim $(fzf --preview="bat --color=always {}")' # fzf + nvim interactive
+alias fzf-tna='thunar $(dirname "$(find ~ | fzf)")' # fzf + thunar
+alias fzf-cda='selected=$(find ~ | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi' # fzf cd
+
+alias code-jpt='code --enable-proposed-api ms-toolsai.jupyter'
+
 # Load aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -76,14 +86,6 @@ fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
-
-alias fzf-nv='find . | nvim $(fzf --preview="bat --color=always {}")' # fzf + nvim interactive
-alias fzf-tn='thunar $(dirname "$(find . | fzf)")' # fzf + thunar
-alias fzf-cd='selected=$(find . | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi' # fzf cd
-# Search all in user
-alias fzf-nva='find ~ | nvim $(fzf --preview="bat --color=always {}")' # fzf + nvim interactive
-alias fzf-tna='thunar $(dirname "$(find ~ | fzf)")' # fzf + thunar
-alias fzf-cda='selected=$(find ~ | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi' # fzf cd
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
