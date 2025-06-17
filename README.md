@@ -8,6 +8,7 @@ Basic info:
 - Firefox/Brave/qutebrowser
 - Alacritty
 - [Neovim](https://github.com/nvim-lua/kickstart.nvim)
+- rofi w/ [adi1090x's theme](https://github.com/adi1090x/rofi) type 4, style 4 launcher, no applet & powermenu + installed [rofi-calc](https://github.com/svenstaro/rofi-calc)
 
 For `~/scripts/`: Make symlinks using `cp -Rs path/to/scripts/ ~/.local/bin/` (or whatever preferred).
 
