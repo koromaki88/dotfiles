@@ -9,12 +9,13 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun";
+	modi:                       "drun,filebrowser,window,calc";
     show-icons:                 true;
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
+    display-drun:               " ";
+    display-run:                " ";
+    display-filebrowser:        " ";
+    display-window:             " ";
+    display-calc:		" ";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -56,7 +57,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1400px;
+    width:                       1000px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -76,7 +77,7 @@ mainbox {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     30px;
+    padding:                     20px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
@@ -123,7 +124,7 @@ entry {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       12;
+    lines:                       16;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -152,7 +153,7 @@ scrollbar {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     6px;
     margin:                      0px;
     padding:                     8px;
     border:                      0px solid;
@@ -201,7 +202,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        42px;
+    size:                        32px;
     cursor:                      inherit;
 }
 element-text {
