@@ -15,3 +15,7 @@ user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false); // [
 user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", false); // Cookies, Site Data, Active Logins [FF128+]
 
 user_pref("privacy.clearOnShutdown.sessions", false);  // Active Logins [DEFAULT: true]
+
+user_pref("browser.startup.page", 3);
+user_pref("browser.startup.homepage", "about:home");
+user_pref("browser.newtabpage.enabled", true);
