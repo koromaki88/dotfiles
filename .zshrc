@@ -1,3 +1,5 @@
+export TERMINAL="kitty"
+
 if [[ -o interactive ]]; then
     fastfetch
 fi
