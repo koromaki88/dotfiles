@@ -270,15 +270,42 @@ require("lazy").setup({
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
 			require("telescope").setup({
-				-- You can put your default mappings / updates / etc. in here
-				--  All the info you're looking for is in `:help telescope.setup()`
-				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
-				-- pickers = {}
+				defaults = {
+					file_ignore_patterns = {
+						-- Images
+						"%.png$",
+						"%.jpg$",
+						"%.jpeg$",
+						"%.gif$",
+						"%.webp$",
+						"%.svg$",
+						-- Archives
+						"%.zip$",
+						"%.tar$",
+						"%.tar.gz$",
+						"%.rar$",
+						-- Documents
+						"%.pdf$",
+						"%.doc$",
+						"%.docx$",
+						"%.ppt$",
+						"%.pptx$",
+						-- Videos
+						"%.mp4$",
+						"%.mkv$",
+						"%.avi$",
+						"%.mov$",
+						-- Audio
+						"%.mp3$",
+						"%.wav$",
+						"%.flac$",
+						-- Other binaries
+						"%.exe$",
+						"%.dll$",
+						"%.so$",
+						"%.o$",
+					},
+				},
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
