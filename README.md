@@ -7,8 +7,12 @@ Basic info:
 - zsh w/ manual p10k install, tmux. Plugins: zsh-autosuggestions & zsh-syntax-highlighting
 - Floorp/Brave/qutebrowser
 - Alacritty
-- [Neovim](https://github.com/nvim-lua/kickstart.nvim)
 - rofi w/ [adi1090x's theme](https://github.com/adi1090x/rofi) type 4, style 4 launcher, no applet & powermenu + installed [rofi-calc](https://github.com/svenstaro/rofi-calc)
+
+## Neovim
+> Original Template: [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+
+- [tree-sitter-latex](https://github.com/latex-lsp/tree-sitter-latex) requires [tree-sitter-cli](https://archlinux.org/packages/extra/x86_64/tree-sitter-cli/)
 
 For `~/scripts/`: Make symlinks using `cp -Rs path/to/scripts/ ~/.local/bin/` (or whatever preferred).
 
