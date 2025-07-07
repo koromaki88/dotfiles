@@ -748,8 +748,17 @@ require("lazy").setup({
 		"OXY2DEV/markview.nvim",
 		lazy = false,
 		priority = 49,
-	},
 
+		opts = {
+			preview = {
+				modes = { "i", "v", "n", "no", "c" },
+				hybrid_modes = { "i", "v", "n" },
+				debounce = 1,
+
+				linewise_hybrid_mode = true,
+			},
+		},
+	},
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
