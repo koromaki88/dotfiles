@@ -57,6 +57,9 @@ tiling_drag modifier
 # flameshot
 bindsym Print exec "~/.local/bin/flameshot_date_subdir"
 
+# boomer (magnifier)
+bindsym $mod+z exec "boomer"
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
