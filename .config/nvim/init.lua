@@ -843,6 +843,30 @@ require("lazy").setup({
 			{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
 		},
 	},
+	{
+		"epwalsh/obsidian.nvim",
+		version = "*",
+		lazy = true,
+		ft = "markdown",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		opts = {
+			workspaces = {
+				{
+					name = "main",
+					path = "~/data/archive/Obsidian/Main",
+				},
+				{
+					name = "ctf-writeups",
+					path = "~/data/archive/Obsidian/CTF-writeups",
+				},
+			},
+			ui = {
+				enable = false,
+			},
+		},
+	},
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
