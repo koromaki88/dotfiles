@@ -5,9 +5,13 @@ Basic info:
 - Arch Linux
 - [AwesomeWM](https://github.com/deficient/deficient)/[i3(blocks)](https://github.com/a-schaefers/i3-wm-gruvbox-theme)
 - zsh w/ manual p10k install, tmux. Plugins: zsh-autosuggestions & zsh-syntax-highlighting
-- Floorp/Brave/qutebrowser
+- ~Floorp/Brave/qutebrowser~ all roads lead back to Firefox
 - Alacritty
 - rofi w/ [adi1090x's theme](https://github.com/adi1090x/rofi) type 4, style 4 launcher, no applet & powermenu + installed [rofi-calc](https://github.com/svenstaro/rofi-calc)
+
+## Firefox
+- [Arkenfox](https://github.com/arkenfox/user.js)
+- Disable 'Alt' key: `ui.key.menuAccessKeyFocuses = false`
 
 ## Neovim
 > Original Template: [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
