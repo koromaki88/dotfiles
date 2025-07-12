@@ -745,19 +745,11 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"OXY2DEV/markview.nvim",
-		lazy = false,
-		priority = 49,
-
-		opts = {
-			preview = {
-				modes = { "i", "v", "n", "no", "c" },
-				hybrid_modes = { "i", "v", "n" },
-				debounce = 1,
-
-				linewise_hybrid_mode = true,
-			},
-		},
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" },
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
 	},
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
@@ -855,11 +847,11 @@ require("lazy").setup({
 			workspaces = {
 				{
 					name = "main",
-					path = "~/data/archive/Obsidian/Main",
+					path = "/mnt/data/archive/Obsidian/Main",
 				},
 				{
 					name = "ctf-writeups",
-					path = "~/data/archive/Obsidian/CTF-writeups",
+					path = "/mnt/data/archive/Obsidian/CTF-writeups",
 				},
 			},
 			ui = {
