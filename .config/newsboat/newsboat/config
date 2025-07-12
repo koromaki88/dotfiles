@@ -1,0 +1,21 @@
+# unbind keys
+unbind-key ENTER
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+
+color title default black
+color listfocus             default black bold
+color listfocus_unread      default black bold
+color info                  default black bold
+color hint-key              default black bold
+color hint-keys-delimiter   default black
+color hint-separator        default black bold
+color hint-description      default black
