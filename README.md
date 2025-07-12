@@ -16,7 +16,7 @@ Basic info:
 ## Neovim
 > Original Template: [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 
-- [tree-sitter-latex](https://github.com/latex-lsp/tree-sitter-latex) requires [tree-sitter-cli](https://archlinux.org/packages/extra/x86_64/tree-sitter-cli/)
+- [tree-sitter-latex](https://github.com/latex-lsp/tree-sitter-latex) requires [tree-sitter-cli](https://archlinux.org/packages/extra/x86_64/tree-sitter-cli/). Using [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) in which latex requires [python-pylatexenc](https://archlinux.org/packages/extra/any/python-pylatexenc/)
 
 For `~/scripts/`: Make symlinks using `cp -Rs path/to/scripts/ ~/.local/bin/` (or whatever preferred).
 
