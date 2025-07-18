@@ -94,3 +94,10 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 export PATH=/home/teio/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/teio/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 
 eval $(keychain --eval --quiet ~/.ssh/gh_desktop)
+
+# bun completions
+[ -s "/home/teio/.bun/_bun" ] && source "/home/teio/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
