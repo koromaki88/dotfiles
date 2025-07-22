@@ -1,4 +1,5 @@
 export TERMINAL="kitty"
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
 
 if [[ -o interactive ]]; then
     fastfetch
