@@ -60,6 +60,9 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Open Netrw
+vim.keymap.set("n", "<leader>o", ":Ex<CR>", { desc = "Open Netrw" })
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
@@ -850,11 +853,11 @@ require("lazy").setup({
 			workspaces = {
 				{
 					name = "main",
-					path = "/mnt/data/archive/Obsidian/Main",
+					path = "~/data/archive/Obsidian/Main",
 				},
 				{
 					name = "ctf-writeups",
-					path = "/mnt/data/archive/Obsidian/CTF-writeups",
+					path = "~/data/archive/Obsidian/CTF-writeups",
 				},
 			},
 			ui = {
