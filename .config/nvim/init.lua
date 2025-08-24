@@ -484,9 +484,9 @@ require("lazy").setup({
 				eslint = {},
 				html = {},
 				tailwindcss = {},
-				ts_ls = {},
 				prettier = {},
 				prettierd = {},
+				vtsls = {},
 
 				-- gopls = {},
 				-- pyright = {},
