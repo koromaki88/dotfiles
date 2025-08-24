@@ -576,7 +576,10 @@ require("lazy").setup({
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
-				-- javascript = { { "prettierd", "prettier" } },
+				javascript = { "prettierd", "prettier", stop_after_first = true },
+				javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+				typescript = { "prettierd", "prettier", stop_after_first = true },
+				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 			},
 		},
 	},
@@ -770,6 +773,8 @@ require("lazy").setup({
 				"luadoc",
 				"markdown",
 				"markdown_inline",
+				"prettier",
+				"prettierd",
 				"vim",
 				"vimdoc",
 			},
@@ -853,11 +858,11 @@ require("lazy").setup({
 			workspaces = {
 				{
 					name = "main",
-					path = "~/data/archive/Obsidian/Main",
+					path = "/mnt/data/archive/Obsidian/Main",
 				},
 				{
 					name = "ctf-writeups",
-					path = "~/data/archive/Obsidian/CTF-writeups",
+					path = "/mnt/data/archive/Obsidian/CTF-writeups",
 				},
 			},
 			ui = {
