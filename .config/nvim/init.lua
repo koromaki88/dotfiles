@@ -481,7 +481,6 @@ require("lazy").setup({
 				clangd = {},
 				cmake = {},
 				cssls = {},
-				eslint = {},
 				html = {},
 				tailwindcss = {},
 				prettier = {},
