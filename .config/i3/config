@@ -171,7 +171,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # i3-lock
-bindsym $mod+Shift+x exec "i3lock -i ~/dotfiles/img/teio2.png"
+bindsym $mod+Shift+x exec "i3lock -i ~/dotfiles/img/desktop-2880_1800.png"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
