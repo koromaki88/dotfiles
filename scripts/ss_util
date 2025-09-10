@@ -1,0 +1,11 @@
+#!/bin/sh
+
+BASE_DIR="$HOME/data/media/images"
+DIR_PATH="$BASE_DIR/ss_util/$(date +'%Y-%m')"
+FILE_PATH="$DIR_PATH/$(date +'%Y-%m-%d-%H-%M-%S').png"
+
+mkdir -p "$DIR_PATH"
+
+if import "$FILE_PATH"; then
+    xclip -selection clipboard -target image/png -in "$FILE_PATH"
+fi

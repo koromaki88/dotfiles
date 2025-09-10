@@ -35,8 +35,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 
 # Automatically set orientation for monitors (very specific to each setup)
-exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
-exec sleep 3s
+# exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
 
 exec --no-startup-id feh --bg-fill ~/dotfiles/img/teio2.png ~/dotfiles/img/suzuka.png
 
@@ -54,8 +53,9 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier
 
-# flameshot
-bindsym Print exec "~/.local/bin/flameshot_date_subdir"
+# screenshot
+bindsym --release Print exec --no-startup-id "~/.local/bin/ss_util"
+bindsym Shift+Print exec "~/.local/bin/flameshot_date_subdir"
 
 # boomer (magnifier)
 bindsym $mod+z exec "boomer"
@@ -170,6 +170,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# i3-lock
+bindsym $mod+Shift+x exec "i3lock -i ~/dotfiles/img/teio2.png"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
