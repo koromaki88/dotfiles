@@ -18,6 +18,4 @@ Basic info:
 
 - [tree-sitter-latex](https://github.com/latex-lsp/tree-sitter-latex) requires [tree-sitter-cli](https://archlinux.org/packages/extra/x86_64/tree-sitter-cli/). Using [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) in which latex requires [python-pylatexenc](https://archlinux.org/packages/extra/any/python-pylatexenc/)
 
-For `~/scripts/`: Make symlinks using `ln -s /path/to/scripts/* ~/.local/bin/` (or whatever preferred).
-
 For SDDM theme `sddm-eucalyptus-drop` move into `/usr/share/sddm/themes/` and change `[Theme]` in `/etc/sddm.conf.d/default.conf` (cp from `/usr/lib/sddm/sddm.conf.d/default.conf` if doesn't already exist). On Arch, install [qt6-5compat](https://archlinux.org/packages/extra/x86_64/qt6-5compat/) for dependencies
