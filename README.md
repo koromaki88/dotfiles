@@ -13,6 +13,10 @@ Basic info:
 - [Arkenfox](https://github.com/arkenfox/user.js)
 - Disable 'Alt' key: `ui.key.menuAccessKeyFocuses = false`
 
+## Ghidra
+- In the project/main window's menu, select `Edit` -> `Theme` -> `Import…` and select `ghidra-gruvbox-dark-hard.theme`
+- UI scaling: Edit `/opt/ghidra/support/launch.properties` and change `VMARGS_LINUX=-Dsun.java2d.uiScale=`
+
 ## Neovim
 > Original Template: [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 
