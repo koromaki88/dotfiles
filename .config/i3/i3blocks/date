@@ -3,5 +3,5 @@
 date '+%a %d %b %H:%M'
 
 if [ "$BLOCK_BUTTON" == "1" ]; then
-  gsimplecal &
+  setsid -f gsimplecal >/dev/null 2>&1 </dev/null
 fi
