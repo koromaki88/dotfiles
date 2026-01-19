@@ -198,13 +198,12 @@ return {
 				},
 				bashls = {},
 				clangd = {},
-				cmake = {},
 				cssls = {},
 				html = {},
-				tailwindcss = {},
-				prettier = {},
-				prettierd = {},
-				vtsls = {},
+				-- tailwindcss = {},
+				-- prettier = {},
+				-- prettierd = {},
+				-- vtsls = {},
 				lua_ls = {
 					settings = {
 						Lua = {
