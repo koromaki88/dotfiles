@@ -6,7 +6,8 @@ vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Open Netrw
-vim.keymap.set("n", "<leader>o", ":Ex<CR>", { desc = "Open Netrw" })
+-- vim.keymap.set("n", "<leader>o", ":Ex<CR>", { desc = "Open Netrw" })
+vim.keymap.set("n", "<leader>o", ":lua MiniFiles.open()<CR>", { desc = "Open Netrw" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
