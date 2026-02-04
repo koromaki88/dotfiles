@@ -34,10 +34,13 @@ exec --no-startup-id dex --autostart --environment i3
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Automatically set orientation for monitors (very specific to each setup)
-# exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
+# Notification server
+exec --no-startup-id dunst
 
-exec --no-startup-id feh --bg-fill ~/dotfiles/img/teio2.png ~/dotfiles/img/suzuka.png
+# Automatically set orientation for monitors (very specific to each setup)
+exec --no-startup-id "~/.screenlayout/kokorodesktop.sh"
+
+exec --no-startup-id feh --bg-fill ~/dotfiles/img/31A.png ~/dotfiles/img/suzuka.png
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -54,11 +57,14 @@ floating_modifier $mod
 tiling_drag modifier
 
 # screenshot
-bindsym --release Print exec --no-startup-id "~/.local/bin/ss_util"
-bindsym Shift+Print exec "~/.local/bin/flameshot_date_subdir"
+bindsym Print exec "~/.local/bin/flameshot_date_subdir"
 
 # boomer (magnifier)
 bindsym $mod+z exec "boomer"
+
+# dunst
+bindsym $mod+c exec --no-startup-id dunstctl close-all
+bindsym $mod+grave exec --no-startup-id dunstctl history-pop
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
