@@ -60,6 +60,6 @@ focus_gained = ""
 [keybinds]
 "Ctrl-Shift-D"      = ["ingame_reset"]
 "Ctrl-Shift-F"      = ["ingame_focus"]
-"Ctrl-R"            = ["ingame_toggle_res(1)"]
+"V"                 = ["ingame_toggle_res(1)"]
 "Ctrl-X"            = ["ingame_toggle_res(2)"]
 "Ctrl-Z"            = ["ingame_toggle_res(3)"]
