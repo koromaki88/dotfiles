@@ -66,6 +66,10 @@ bindsym $mod+z exec "boomer"
 bindsym $mod+c exec --no-startup-id dunstctl close-all
 bindsym $mod+grave exec --no-startup-id dunstctl history-pop
 
+# define / translate
+bindsym $mod+Shift+d exec --no-startup-id define
+bindsym $mod+Shift+t exec --no-startup-id translate
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
