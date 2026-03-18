@@ -75,11 +75,6 @@ alias fzf-nva='find ~ | nvim $(fzf --preview="bat --color=always {}")' # fzf + n
 alias fzf-tna='thunar $(dirname "$(find ~ | fzf)")' # fzf + thunar
 alias fzf-cda='selected=$(find ~ | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi' # fzf cd
 
-# aliases for https://gist.github.com/koromaki88/2081dd495bb00b53e76c76da129cd0a5
-alias ai-cli='podman run -it --rm --name ai-session -v "$(pwd)":/mnt/share:Z ai-container'
-alias opencode='podman run -it --rm --name ai-session -v "$(pwd)":/mnt/share:Z ai-container opencode'
-alias gemini='podman run -it --rm --name ai-session --env-file $HOME/.config/gemini/.env -v "$(pwd)":/mnt/share:Z ai-container gemini'
-
 # Load aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
