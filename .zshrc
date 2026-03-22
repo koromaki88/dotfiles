@@ -1,5 +1,6 @@
 export TERMINAL="kitty"
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
+export ATAC_KEY_BINDINGS=$HOME/.config/atac/vim_key_bindings.toml
 
 if [[ -o interactive ]]; then
     fastfetch
@@ -90,10 +91,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:$HOME/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 
 eval $(keychain --eval --quiet ~/.ssh/gh_laptop)
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
