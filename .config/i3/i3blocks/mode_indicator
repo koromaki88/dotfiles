@@ -1,22 +1,36 @@
 #!/bin/bash
 
 get_layout() {
-    # get the current window's layout
-    MODE=$(i3-msg -t get_tree | jq -r 'recurse(.nodes[];.nodes!=null)|select(.nodes[].focused).layout')
+    TREE=$(i3-msg -t get_tree)
+
+    # get the current window's layout & scratchpad counts
+    MODE=$(echo "$TREE" | jq -r 'recurse(.nodes[];.nodes!=null)|select(.nodes[].focused).layout')
+    SCRATCH_COUNT=$(echo "$TREE" | jq -r '.. | objects | select(.name == "__i3_scratch") | .floating_nodes | length')
+
+    # fallback to 0 if returns empty
+    SCRATCH_COUNT=${SCRATCH_COUNT:-0}
     
     case "$MODE" in
-        "splith"|"splitv") echo "split" ;;
-        "stacked") echo "stack" ;;
-        "tabbed") echo "tabbed" ;;
-        *) echo "unknown" ;;
+        "splith"|"splitv") MODE_STR="split" ;;
+        "stacked") MODE_STR="stack" ;;
+        "tabbed") MODE_STR="tabbed" ;;
+        *) MODE_STR="unknown" ;;
     esac
+    
+    if [ "$SCRATCH_COUNT" -gt 0 ]; then
+        echo "${MODE_STR} (${SCRATCH_COUNT})"
+    else
+        echo "${MODE_STR}"
+    fi
 }
 
 get_layout
 
 i3-msg -t subscribe -m '["binding", "window" ]' | jq -r --unbuffered '
     if .change == "focus" then "update"
+    elif .change == "move" then "update"
     elif (.binding? // {} | .command | contains("layout")) then "update"
+    elif (.binding? // {} | .command | contains("scratchpad")) then "update"
     else empty end
     ' | while read -r trigger; do
     get_layout
