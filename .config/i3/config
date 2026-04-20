@@ -38,12 +38,11 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 
 # Automatically set orientation for monitors (very specific to each setup)
-exec --no-startup-id "~/.screenlayout/kokorodesktop-3screen.sh"
-
-exec --no-startup-id xwallpaper \
-    --output HDMI-0 --zoom ~/dotfiles/img/31A.png \
-    --output DP-2 --zoom ~/dotfiles/img/suzuka.png \
-    --output DP-1 --zoom ~/dotfiles/img/liz-to-aoi-tori.jpg
+exec_always --no-startup-id "~/.screenlayout/kokorodesktop-3screen.sh; \
+feh --bg-fill \
+    ~/dotfiles/img/31A.png \
+    ~/dotfiles/img/liz-to-aoi-tori.jpg \
+    ~/dotfiles/img/suzuka.png"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
