@@ -7,7 +7,20 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Open Netrw
 -- vim.keymap.set("n", "<leader>o", ":Ex<CR>", { desc = "Open Netrw" })
-vim.keymap.set("n", "<leader>o", ":lua MiniFiles.open()<CR>", { desc = "Open Netrw" })
+vim.keymap.set("n", "<leader>o", function()
+	local MiniFiles = require("mini.files")
+	MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
+	MiniFiles.reveal_cwd()
+end, { desc = "Open mini.files" })
+
+-- Jump to matched phrase inside '[]'
+vim.keymap.set("n", "gl", function()
+	vim.cmd("normal! yi[")
+	local link_text = vim.fn.getreg('"')
+	local pattern = "^#\\+\\s\\V" .. vim.fn.escape(link_text, "\\")
+	vim.fn.search(pattern)
+	vim.cmd("normal! zz")
+end, { desc = "Follow link to phrase" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
