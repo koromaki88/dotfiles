@@ -131,7 +131,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
