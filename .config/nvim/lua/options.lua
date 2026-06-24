@@ -14,6 +14,7 @@ vim.opt.showmode = false
 -- Sync clipboard between OS and Neovim.
 vim.opt.clipboard = "unnamedplus"
 
+vim.opt.cindent = true
 vim.opt.breakindent = true
 vim.opt.undofile = true
 
