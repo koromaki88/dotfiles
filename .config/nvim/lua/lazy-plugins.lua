@@ -10,17 +10,18 @@
 --
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
-	require("kickstart.plugins.gitsigns"),
-	require("kickstart.plugins.fzf-lua"),
-	require("kickstart.plugins.lspconfig"),
-	require("kickstart.plugins.conform"),
-	require("kickstart.plugins.blink-cmp"),
-	require("kickstart.plugins.gruvbox-flat"),
-	require("kickstart.plugins.mini"),
-	require("kickstart.plugins.treesitter"),
-	require("kickstart.plugins.render-markdown"),
-	require("kickstart.plugins.nvim-colorizer"),
-	require("kickstart.plugins.nvim-ts-autotag"),
+	require("plugins.gitsigns"),
+	require("plugins.fzf-lua"),
+	require("plugins.lspconfig"),
+	require("plugins.conform"),
+	require("plugins.blink-cmp"),
+	require("plugins.gruvbox-flat"),
+	require("plugins.mini"),
+	require("plugins.treesitter"),
+	require("plugins.render-markdown"),
+	require("plugins.nvim-colorizer"),
+	require("plugins.nvim-ts-autotag"),
+	require("plugins.which-key"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
