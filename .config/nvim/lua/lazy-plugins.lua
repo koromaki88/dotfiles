@@ -20,7 +20,6 @@ require("lazy").setup({
 	require("plugins.treesitter"),
 	require("plugins.render-markdown"),
 	require("plugins.nvim-colorizer"),
-	require("plugins.nvim-ts-autotag"),
 	require("plugins.which-key"),
 }, {
 	ui = {

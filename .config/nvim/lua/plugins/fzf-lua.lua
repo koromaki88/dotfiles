@@ -4,78 +4,19 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	-- or if using mini.icons/mini.nvim
 	-- dependencies = { "nvim-mini/mini.icons" },
-	---@module "fzf-lua"
-	---@type fzf-lua.Config|{}
-	---@diagnostic disable: missing-fields
-	keys = {
-		{
-			"<leader>sf",
-			function()
-				require("fzf-lua").files()
-			end,
-		},
-		{
-			"<leader>sg",
-			function()
-				require("fzf-lua").live_grep()
-			end,
-		},
-		{
-			"<leader>sv",
-			function()
-				require("fzf-lua").grep_visual()
-			end,
-			mode = "v",
-		},
-		{
-			"<leader>sk",
-			function()
-				require("fzf-lua").keymaps()
-			end,
-		},
-		{
-			"<leader>sb",
-			function()
-				require("fzf-lua").buffers()
-			end,
-		},
-		{
-			"<leader>sd",
-			function()
-				require("fzf-lua").diagnostics_document()
-			end,
-		},
-		{
-			"<leader>sh",
-			function()
-				require("fzf-lua").helptags()
-			end,
-		},
-		{
-			"<leader>ss",
-			function()
-				require("fzf-lua").lsp_document_symbols()
-			end,
-		},
-		{
-			"<leader>sw",
-			function()
-				require("fzf-lua").lsp_live_workspace_symbols()
-			end,
-		},
-		{
-			"<leader>sr",
-			function()
-				require("fzf-lua").resume()
-			end,
-		},
-		{
-			"<leader>so",
-			function()
-				require("fzf-lua").oldfiles()
-			end,
-		},
-	},
+	config = function()
+		local fzf = require("fzf-lua")
+		vim.keymap.set("n", "<leader>sh", fzf.helptags, { desc = "Search Help" })
+		vim.keymap.set("n", "<leader>sk", fzf.keymaps, { desc = "Search Keymaps" })
+		vim.keymap.set("n", "<leader>sf", fzf.files, { desc = "Search Files" })
+		vim.keymap.set("n", "<leader>sg", fzf.live_grep, { desc = "Live Grep" })
+		vim.keymap.set("v", "<leader>sv", fzf.grep_visual, { desc = "Visual Grep" })
+		vim.keymap.set("n", "<leader>sd", fzf.diagnostics_workspace, { desc = "Search Diagnostics" })
+		vim.keymap.set("n", "<leader>sr", fzf.resume, { desc = "Search Resume" })
+		vim.keymap.set("n", "<leader>sd", fzf.lsp_document_symbols, { desc = "Search Document Symbols" })
+		vim.keymap.set("n", "<leader>sd", fzf.lsp_live_workspace_symbols, { desc = "Search Workspace Symbols" })
+		vim.keymap.set("n", "<leader>so", fzf.oldfiles, { desc = "Search Recent Files" })
+		vim.keymap.set("n", "<leader>sb", fzf.buffers, { desc = "Search Buffers" })
+	end,
 	opts = {},
-	---@diagnostic enable: missing-fields
 }
