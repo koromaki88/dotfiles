@@ -61,5 +61,5 @@ focus_gained = ""
 "Ctrl-Shift-D"      = ["ingame_reset"]
 "Ctrl-Shift-F"      = ["ingame_focus"]
 "V"                 = ["ingame_toggle_res(1)"]
-"H"            = ["ingame_toggle_res(2)"]
+#"H"            = ["ingame_toggle_res(2)"]
 #"N"            = ["ingame_toggle_res(3)"]
