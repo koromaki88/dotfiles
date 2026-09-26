@@ -65,6 +65,14 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
+  fileSystems."/mnt/share" = {
+    device = "nix-share";
+    fsType = "virtiofs";
+    options = [
+      "defaults"
+    ];
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cirno = {
     isNormalUser = true;
