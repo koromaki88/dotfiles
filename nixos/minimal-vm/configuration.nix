@@ -119,6 +119,7 @@
      netcat
      p7zip
      unzip
+     usbutils
      vim
      wget
      zip
@@ -140,9 +141,9 @@
      volatility3
      wireshark-cli
 
-     # others 
+     # others
+     android-tools 
      opencode
-     tailscale
      zsh-powerlevel10k
   ];
  
@@ -174,6 +175,10 @@
     enable = true;
     dockerCompat = true; # Creates a symlink from docker to podman
     defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
+  };
+
+  services.tailscale = {
+    enable = true;
   };
 
   # Open ports in the firewall.
