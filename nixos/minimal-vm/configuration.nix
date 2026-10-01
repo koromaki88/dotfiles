@@ -70,13 +70,19 @@
     fsType = "virtiofs";
     options = [
       "defaults"
+      "nofail"
     ];
   };
+
+  users.groups.adbusers = {};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cirno = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ 
+      "adbusers"
+      "wheel"
+    ];
     packages = with pkgs; [
       tree
     ];
@@ -170,15 +176,15 @@
       PerSourcePenalties = "crash:3600s authfail:3600s max:86400s";
     };
   };
+  services.tailscale = {
+    enable = true;
+  };
+  services.udev.extraRules = ''SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ENV{ID_DEBUG_APPLIANCE}=="android", GROUP="adbusers", MODE="0660"'';
 
   virtualisation.podman = {
     enable = true;
     dockerCompat = true; # Creates a symlink from docker to podman
     defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
-  };
-
-  services.tailscale = {
-    enable = true;
   };
 
   # Open ports in the firewall.
