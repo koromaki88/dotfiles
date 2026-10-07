@@ -34,8 +34,8 @@ exec --no-startup-id dex --autostart --environment i3
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Notification server
-exec --no-startup-id dunst
+exec --no-startup-id dunst      # Notification server
+exec --no-startup-id fcitx5 -d  # Input method framework
 
 # Automatically set orientation for monitors (very specific to each setup)
 exec --no-startup-id "~/.screenlayout/kokorodesktop-3screen.sh; \
