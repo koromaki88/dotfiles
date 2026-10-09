@@ -6,6 +6,8 @@
     ./modules/packages/core.nix
     ./modules/packages/development.nix
     ./modules/packages/forensics.nix
+    ./modules/packages/pentest.nix
+    ./modules/packages/program-lang.nix
     ./modules/android.nix
     ./modules/shell.nix
     ./modules/networking.nix
