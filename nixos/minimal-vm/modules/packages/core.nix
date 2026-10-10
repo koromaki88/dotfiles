@@ -5,6 +5,7 @@
     btop
     file
     netcat
+    openvpn
     p7zip
     unzip
     usbutils
