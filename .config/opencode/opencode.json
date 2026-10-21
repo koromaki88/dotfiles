@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "skill": {
+      "*": "ask"
+    }
+  },
+  "mcp": {
+    "burpsuite": {
+      "type": "remote",
+      "url": "http://127.0.0.1:9876/",
+      "enabled": true
+    },
+    "katalon-docs": {
+      "type": "remote",
+      "url": "https://mcp.katalon.com/mcp",
+      "enabled": true
+    },
+    "katalon-studio": {
+      "type": "remote",
+      "url": "http://127.0.0.1:33699/mcp/stream",
+      "enabled": true
+    },
+    "idea": {
+      "type": "remote",
+      "url": "http://127.0.0.1:64342/stream",
+      "oauth": false
+    }
+  }
+}
