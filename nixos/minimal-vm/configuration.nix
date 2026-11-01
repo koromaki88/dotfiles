@@ -38,6 +38,13 @@
     ];
   };
 
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      pocl
+    ];
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   # Keep this at the version used for the initial installation.
