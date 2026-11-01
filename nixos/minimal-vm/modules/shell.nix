@@ -20,8 +20,13 @@
 
     shellAliases = {
       ll = "ls -lahF";
+
       update = "sudo nixos-rebuild switch";
+      upgrade = "sudo nixos-rebuild switch --upgrade";
+      
       update-flake = "sudo nixos-rebuild switch --flake .#nixos";
+      upgrade-flake = "sudo nix flake update && sudo nixos-rebuild switch --flake .#nixos";
+
       cleanup = "sudo nix-collect-garbage -d";
     };
 
