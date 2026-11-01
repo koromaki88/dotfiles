@@ -27,7 +27,7 @@
       update-flake = "sudo nixos-rebuild switch --flake .#nixos";
       upgrade-flake = "sudo nix flake update && sudo nixos-rebuild switch --flake .#nixos";
 
-      cleanup = "sudo nix-collect-garbage -d";
+      cleanup = "sudo nix-collect-garbage -d && sudo nix store gc";
     };
 
     histSize = 10000;
