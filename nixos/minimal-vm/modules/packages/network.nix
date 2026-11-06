@@ -1,0 +1,9 @@
+
+{ pkgs, ... }:
+
+{
+  environment.systemPackages = with pkgs; [
+    tcpdump
+    wireshark-cli
+  ];
+}

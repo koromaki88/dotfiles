@@ -6,6 +6,7 @@
     ./modules/packages/core.nix
     ./modules/packages/development.nix
     ./modules/packages/forensics.nix
+    ./modules/packages/network.nix
     ./modules/packages/pentest.nix
     ./modules/packages/program-lang.nix
     ./modules/packages/reverse.nix

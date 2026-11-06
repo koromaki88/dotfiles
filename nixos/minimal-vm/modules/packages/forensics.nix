@@ -11,6 +11,5 @@
     strace
     testdisk
     volatility3
-    wireshark-cli
   ];
 }
