@@ -51,8 +51,20 @@
   # Keep this at the version used for the initial installation.
   system.stateVersion = "26.05";
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 3d";
+  };
+
+  nix.settings = {
+    min-free = 5 * 1024 * 1024 * 1024;
+    max-free = 10 * 1024 * 1024 * 1024;
+
+    auto-optimise-store = true;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
 }
