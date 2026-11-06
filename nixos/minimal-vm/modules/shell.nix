@@ -23,7 +23,10 @@
 
       update = "sudo nixos-rebuild switch";
       upgrade = "sudo nixos-rebuild switch --upgrade";
+
+      upgrade-inputs = "nix flake update";
       
+      test-flake = "nixos-rebuild build --flake .#nixos";
       update-flake = "sudo nixos-rebuild switch --flake .#nixos";
       upgrade-flake = "sudo nix flake update && sudo nixos-rebuild switch --flake .#nixos";
 
