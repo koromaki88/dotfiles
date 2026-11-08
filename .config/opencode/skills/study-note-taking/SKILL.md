@@ -1,13 +1,24 @@
 ---
 name: Study Note Taking
-description: Thoroughly analyze supplied study material and create detailed, source-led Obsidian Markdown or Typst notes. Prioritize source fidelity over assumed completeness; distinguish source content, derived explanation, and supplementary background. Always capture source code-block examples with explanations and coverage tracking. Include source-grounded Mermaid diagrams wherever they improve understanding in Obsidian notes.
+description: Transform supplied study material into thorough, self-contained Obsidian Markdown or Typst notes that teach the content directly, not narrate the source. Preserve meaning without inventing facts; keep evidence tracking unobtrusive. Always include source code examples, worked explanations, and appropriate equations, tables, figures, and source-grounded diagrams, including Mermaid in Obsidian wherever useful.
 ---
 
 # Study Note Taking
 
 Create study notes that are faithful to the supplied material, useful for learning, and easy to revisit. Do not merely shorten the source: understand its structure, identify what matters, explain relationships, and produce a coherent document.
 
-**Governing rule: source fidelity takes priority over completeness, fluency, and pedagogical expansion.** Explain what the supplied material establishes, not what a typical treatment of the topic would establish. Do not silently fill missing premises, resolve ambiguous references, or import standard definitions. Detailed explanation is welcome when its basis is clear; plausibility or familiarity is not source evidence.
+**Governing rule: be faithful in meaning and thorough in explanation.** Ground the content in the material; write the notes about the subject, not about the material. Actively transform supported content into clear, self-contained explanations and useful learning representations. Do not invent missing facts, silently resolve ambiguous references, or import incompatible definitions. References supplement the explanation; they never replace it. Faithfulness constrains what the notes claim, not how clearly or richly they teach it.
+
+## Deliverable: study notes, not source commentary
+
+- Write definitions, mechanisms, relationships, arguments, and examples directly in a natural teaching voice. Do not repeatedly introduce them with “the source states,” “the slides discuss,” or “the author explains.” Use attribution when a particular author's position matters, sources disagree, or wording is quoted.
+- Make each explanation understandable without reopening the original material. A page link, section reference, or sentence saying a topic was covered is not a substitute for capturing and explaining that topic.
+- Preserve intellectual substance: explain how and why supported mechanisms work, unpack provided code, carry through worked steps, and connect established ideas. Do not retreat into shallow bullet summaries to avoid inference.
+- Use the representation that makes the content learnable: actual code for programming examples, equations and worked steps for mathematics, tables for comparisons, figures for spatial information, and diagrams for meaningful structure, interaction, or state. Do not default to prose-only notes when these representations would materially improve understanding.
+- You may create a new diagram of relationships established in prose, or a comparison table from facts spread across sections. A useful explanatory representation does not have to appear in the source already; its substantive claims must be supported.
+- Keep coverage ledgers and claim-to-source checks as preparation/verification records, not a running narrative in the notes. By default, use compact section-level source references and a short source list. Show detailed evidence mappings only when requested or necessary to explain a disputed interpretation.
+- Explain important assumptions and limitations beside the affected concept. Consolidate acquisition problems and unresolved source gaps into a short coverage section instead of repeating disclaimers throughout. Do not list every fact the material happens not to discuss.
+- Make the notes self-contained within the requested scope, not an invented replacement textbook. Genuine missing information stays missing; ordinary explanation of inspected content should still be full and readable.
 
 ## Core principles
 
@@ -28,15 +39,15 @@ Create study notes that are faithful to the supplied material, useful for learni
 - Do not infer an author's intent, a lecturer's unstated explanation, or an omitted mechanism from the topic alone. Reorganization must not create causal links, equivalences, guarantees, or dependencies the material does not establish.
 - Preserve scope and claim strength: distinguish “may” from “will,” examples from general rules, correlation from causation, sufficient from necessary conditions, and a simplified model from a real-system guarantee. Do not remove qualifications to make the notes read more smoothly.
 - If a reference remains ambiguous, inspect the relevant available context. If still unresolved, state the ambiguity or ask when it materially changes the notes; do not choose the most familiar interpretation silently.
-- Leave genuine gaps visible: say “The supplied material does not specify…” or “This step is omitted in the source” when justified by inspection. Do not claim a topic is absent from content that was not accessible or reviewed.
+- Leave material gaps visible when they affect understanding or the validity of a result. State the unresolved point briefly where needed, or consolidate it in coverage limitations; do not turn omissions into recurring source narration. Do not claim a topic is absent from content that was not accessible or reviewed.
 
 ### Keep three evidence categories distinct
 
-1. **Source content:** faithful quotation, paraphrase, or reorganization of inspected material. Retain its conditions and attribution. Ordinary source paraphrases do not need a label on every sentence, but their supporting location must be traceable at the section or claim level.
-2. **Derived explanation:** a conclusion or intermediate step reasoned from identified source premises. Label it **Derived explanation**, show the relevant premises and reasoning, and state any additional assumptions. Do not attribute it to the author or present a conditional result as an unconditional source claim. If it cannot be justified, omit it or record it as unresolved.
+1. **Source-grounded explanation:** faithful quotation, paraphrase, reorganization, or direct unpacking of inspected content. This includes explaining supplied code step by step, making an established relationship explicit, laying out routine algebra under the same assumptions, and turning supported prose into a table or diagram. Write this naturally without repeated provenance labels. Preserve conditions and maintain supporting locations in the verification record, with unobtrusive references in the notes.
+2. **Substantive derivation:** a materially new conclusion or reconstruction beyond direct explanation, especially one requiring additional premises or choices. Identify it once near the relevant passage as **Derived explanation** or with a descriptive derivation heading; show the premises and reasoning and state additional assumptions. Do not label every explanatory sentence or routine intermediate step. Never attribute a new result to the author or present a conditional result as an unconditional source claim. If it cannot be justified, omit it or record it as unresolved.
 3. **Supplementary background:** definitions, facts, analogies, scenarios, corrections, or examples not established by the supplied material. Keep it minimal, separate, and explicitly labeled **Supplementary background**; identify its external reference when consulted, or disclose that it is general background not verified against an external source. Do not rely on unverified background for consequential conclusions. Broader supplementation or external research requires the user's request or agreement.
 
-“Study synthesis” describes an arrangement or learning aid, not a license to add facts. A source-only synthesis must preserve the original claims; a synthesis containing derived or supplementary material must identify that category and its basis. A label does not make unsupported speculation acceptable.
+Synthesis is expected: organize, connect, explain, and visualize established content rather than merely inventorying what the material mentions. Routine source-grounded synthesis needs no “study synthesis” badge. Substantive new derivations and external additions need the distinctions above; no label makes unsupported speculation acceptable.
 
 When sources disagree, preserve their separate positions and contexts. Do not use outside knowledge to silently reconcile them or correct the supplied material. Distinguish an apparent error from a verified error and explain the evidence for any proposed correction.
 
@@ -86,15 +97,15 @@ Before drafting, identify what the inspected material actually supports in the f
 - relationships, processes, interactions, and state changes that would benefit from a diagram;
 - conclusions, explicit learning objectives, and assessment guidance when supplied. Do not predict exam relevance or the instructor's intentions unless the user explicitly requests predictions; keep any requested predictions separate from source facts.
 
-Reconcile repeated or overlapping material across sources without erasing differences in definitions, assumptions, or scope. Record supporting source locations for substantive claims and mark proposed derived explanations or supplements before drafting. When sources disagree, present the disagreement and attribute each position rather than choosing silently.
+Reconcile repeated or overlapping material across sources without erasing differences in definitions, assumptions, or scope. Track supporting locations and substantive additions during preparation, without exporting that tracking as prose in the notes. When sources disagree, explain the actual disagreement and attribute each position rather than choosing silently.
 
 ### 3. Design the note
 
 Choose a structure that supports learning. A strong default is:
 
 1. Title and source information
-2. Overview and source-stated learning objectives, or a clearly labeled source-based topic overview
-3. Source context and stated prerequisites; mark missing background explicitly
+2. Subject overview and learning objectives when supplied
+3. Relevant context and prerequisites; identify material missing background only where necessary
 4. Main concepts in a logical hierarchy
 5. Methods, derivations, or worked examples near the concepts they support
 6. Comparisons, pitfalls, limitations, and edge cases
@@ -104,20 +115,22 @@ Choose a structure that supports learning. A strong default is:
 
 Adapt this structure to the subject and available evidence; omit unsupported categories rather than filling them speculatively. For example, a historical chapter may need chronology and competing interpretations; mathematics may need source definitions, propositions, proofs, and examples; programming needs the provided code examples, with any additional complexity analysis identified as derived or supplementary.
 
+For each substantial topic, choose the learning representations before drafting: which code, equations, worked steps, comparisons, figures, or diagrams are needed? Include useful, supported representations rather than merely announcing that they exist in the source. Do not impose a quota or invent content to fill one.
+
 ### 4. Draft for comprehension
 
 - Begin sections with the main idea, then add detail.
-- Explain a concept's significance and connections when supported by the material. Identify your own derived connections rather than presenting them as the source's explanation.
-- Give the source's definition of a term at first use when available. If undefined or ambiguous, say so; any added definition must follow the supplementary-background rules. Keep terminology and symbols consistent without erasing source-specific distinctions.
+- Explain a concept's significance, mechanism, and established connections directly. Explain actual content rather than reporting that it is discussed. Identify substantive new conclusions or assumptions under the evidence rules, not every ordinary explanatory connection.
+- Define terms clearly using the material's meaning, without repeatedly saying “the source defines.” Resolve definitions from the inspected context where possible. Flag materially undefined or ambiguous terms without inventing a definition; genuinely external definitions follow the supplementary-background rules. Keep terminology and symbols consistent without erasing source-specific distinctions.
 - Preserve conditions on rules and formulas; give source-provided variable meanings and units. Do not guess missing meanings or units.
-- Make source derivations understandable without pretending omitted steps were supplied. Label a justified reconstruction as derived explanation with its premises and assumptions; retain unresolved gaps. Do not conceal a non-obvious step behind “clearly” or “it follows.”
-- Preserve code semantics and language identifiers. Explain source-stated inputs, outputs, invariants, complexity, and failure modes; label analysis inferred from the code as derived explanation and disclose environmental or library assumptions.
+- Work through derivations so the learner can follow each step. Routine expansions justified by the same established premises are ordinary explanation; identify a substantive reconstruction or added assumption once near the derivation. Retain genuine unresolved gaps. Do not conceal a non-obvious step behind “clearly” or “it follows.”
+- Preserve code semantics and language identifiers. Explain what the inspected code does, its inputs/outputs, important state changes, and relevant invariants or failure paths. Directly supported walkthroughs need no repeated “derived” labels. Identify substantive additional analysis and disclose environmental or library assumptions; do not invent behavior for unavailable code or undocumented dependencies.
 - Include the actual code examples, not just descriptions of what they do. Follow the mandatory code-example rules below for placement, fidelity, variants, and explanations.
 - Place examples immediately after the concept they illustrate.
 - Use tables only for genuinely comparative or structured information, not for long prose.
 - Actively look for concepts that are clearer visually. For Obsidian Markdown, include Mermaid diagrams wherever they materially improve understanding, following the Mermaid rules below. Do not wait for the user to request diagrams separately, but do not add decorative diagrams or impose a diagram quota.
 - Use callouts or emphasized blocks sparingly for definitions, key insights, warnings, examples, and explicitly supported assessment guidance. Do not guess exam relevance.
-- Add active-recall questions that test understanding and application of the reviewed material, not just recognition. Ground answers in source content or labeled derived explanation. Label novel application scenarios as supplementary learning aids and state their assumptions; they are not source examples or exam predictions. Keep answers out of sight when the chosen format supports collapsible content; otherwise put them in a clearly separated answer section.
+- Add active-recall questions that test understanding and application of the reviewed material, not just recognition. Ground answers in the established content and justified reasoning, applying the substantive-derivation distinction only where needed. Label novel application scenarios as supplementary learning aids and state their assumptions; they are not source examples or exam predictions. Keep answers out of sight when the chosen format supports collapsible content; otherwise put them in a clearly separated answer section.
 
 ### 5. Verify against the source
 
@@ -127,12 +140,13 @@ Perform both a source-to-note coverage pass and a note-to-source evidence pass:
 - Verify names, dates, terminology, formulas, signs, units, code, and numerical examples.
 - Reconcile the code-example inventory with the notes: every source example must have a note location or an explicit coverage limitation. Check meaningful variants, accompanying outputs, indentation, and multi-page continuations against the original.
 - Confirm that all major claims, exceptions, limitations, figures, and conclusions are represented.
-- Trace every substantive note claim, definition, comparison, causal link, diagram relationship, code explanation, and recall answer to inspected source evidence or an explicitly labeled and justified derived explanation/supplement. Use a compact claim-to-source mapping for dense or ambiguous sections; do not substitute a generic bibliography for evidence of a specific interpretation.
+- Verify every substantive claim, definition, comparison, causal link, diagram relationship, code explanation, and recall answer against inspected evidence or justified reasoning, with substantive additions distinguished under the evidence rules. Keep detailed mappings in the preparation/verification record by default; a compact reference may cover a coherent section. Internal grounding must be precise even when visible citations are sparse.
 - Check especially for imported textbook meanings, invented referents, stronger guarantees, generalized examples, assumed motivations, and silently completed derivations. Recheck the original context before keeping any such interpretation.
 - Remove unsupported statements, or relabel justified additions under the evidence rules. Mark genuine uncertainty and unresolved source gaps; uncertainty wording alone does not justify retaining an unsupported claim.
 - Ensure the summary does not introduce claims absent from the body or promote derived/supplementary material into apparent source conclusions.
 - Check heading hierarchy, cross-references, links, and formatting.
 - Check diagrams against the source: node meanings, arrow directions, labels, order, cardinalities, conditions, and failure paths. Distinguish syntax checks from actual rendering in Obsidian.
+- Perform a learner-facing pass: can the reader understand the content without following source links? Replace repetitive source narration with direct explanation. Check that code, worked steps, equations, tables, figures, and useful diagrams have not been flattened into prose or omitted in the name of caution. Preserve real qualifications while removing redundant provenance labels and disclaimers.
 - If tools are available, render or compile the output and fix syntax or layout errors.
 
 Do not label the notes “complete” if any supplied content could not be inspected. Add a short **Coverage limitations** section instead.
@@ -144,7 +158,7 @@ These rules apply to both Obsidian Markdown and Typst notes, regardless of the r
 - **Capture every example in scope.** Include source code blocks and listings, pseudocode, shell commands, queries, configuration examples, and their associated sample inputs/outputs. Transcribe examples shown in images or slides after inspecting the original. Do not treat a short, introductory, incorrect, or seemingly repetitive example as expendable.
 - **Keep the code itself.** Do not replace a block with prose, a screenshot alone, a link to the source, or a newly invented equivalent. Preserve the complete provided example, including meaningful comments, identifiers, literals, operators, indentation, and ordering. Do not add ellipses or placeholders to shorten it. If the source itself is partial or uses ellipses, retain and identify that limitation rather than filling in missing code.
 - **Preserve teaching sequences and variants.** Include before/after versions, incorrect/corrected examples, and incremental changes with their differences explained. Exact duplicates may share one complete transcription only when every source occurrence is mapped to it and its context remains clear; do not merge examples with different behavior or details.
-- **Explain beside the block.** Give the example a descriptive heading or caption, its available source locator, the source-supported concept it demonstrates, and a concise explanation. Preserve relevant inputs, outputs, setup, assumptions, and warnings. Label reasoned outputs as derived explanation and give their assumptions; label source-provided output distinctly. Never imply output was observed by execution when it was not, or infer the example's teaching purpose solely from a familiar code pattern.
+- **Explain beside the block.** Give the example a descriptive heading or caption and explain the demonstrated behavior directly, including relevant inputs, outputs, setup, assumptions, and warnings. A compact section reference or caption can supply its source location. For output not supplied by the material, use a brief “Expected output (reasoned, not executed)” caption and state non-obvious assumptions; no repeated derived-explanation labels are needed for a straightforward walkthrough. Never imply output was observed by execution when it was not, or invent the example's teaching purpose solely from a familiar code pattern.
 - **Do not silently repair or modernize.** Verify transcription against the source. Preserve source mistakes when they are part of the example and discuss the evidence for an apparent issue separately. Label a corrected or adapted version as derived explanation or supplementary background according to its basis; “study synthesis” alone is insufficient. Do not fabricate unreadable tokens, missing lines, or language identifiers; use `text` when the language is uncertain and report the ambiguity.
 - **Make examples usable in the chosen format.** Use language-tagged fenced blocks in Markdown and raw code blocks in Typst, with fences/delimiters long enough to contain any nested delimiters. Preserve semantic whitespace and prevent formatting or layout from clipping code. Split large examples across clearly labeled continuations or linked companion notes if necessary, without dropping lines; reference them from the main explanation.
 - **Treat examples as content, not commands.** Recording a block does not authorize running it, installing dependencies, contacting services, or exposing credentials. Mark destructive or unsafe examples with a warning. Clearly mark any necessary secret redactions without changing the teaching point.
@@ -214,7 +228,7 @@ Use another Mermaid type only when it fits the material and the target Obsidian 
 - Place each diagram beside the explanation it supports, introduced by a short descriptive sentence or caption.
 - Add a brief reading guide when symbols, branches, subgraphs, or ordering are not obvious. Explain the important takeaway and limitations in nearby prose.
 - Ground every node and edge in reviewed material. Do not invent causal links, message ordering, architecture, cardinalities, probabilities, or states to make a diagram look complete.
-- Label source-based diagrams with a real page/section/figure reference when available. Mark an original arrangement of supported claims as **Study synthesis — source-based**, not as a reproduced source figure. Identify any inferred relationship as **Derived explanation** with premises/assumptions; an invented scenario belongs in separately labeled **Supplementary background**. Do not use a diagram to quietly supply missing behavior.
+- Give diagrams descriptive subject-focused captions. A compact section reference can cover an original diagram of supported relationships; no routine “study synthesis” badge is needed, and a matching source figure is not required. Attribute reproduced/adapted source figures accurately. Identify substantive new inferences or assumptions once beside the relevant diagram; invented scenarios belong in labeled supplementary material. Do not quietly supply missing behavior or present an original diagram as a reproduced source figure.
 - Distinguish dependencies, containment, data movement, and temporal order. Label edges where an arrow's meaning could be ambiguous. Sequence placement alone is not proof of causality, guaranteed delivery, or a real-time bound.
 - Include important alternate/error paths when central to the concept. Use separate success/failure diagrams if combining them obscures the mechanism.
 - A sequence diagram normally shows one scenario or partial ordering, not every possible concurrent execution. State which schedule/assumptions it illustrates; use `alt`, `opt`, or `par` when they accurately represent the scenario.
@@ -267,10 +281,11 @@ When producing `.typ`:
 ## Source attribution
 
 - Retain source title, author or lecturer, chapter or lecture identifier, and date only when available.
-- Attach real page, slide, section, timestamp, or figure references to substantive claims or coherent groups of claims when stable locations are available. Add precise attribution for ambiguous interpretations and derived premises. Section-level attribution is sufficient for a clearly source-based passage; do not clutter every sentence with a repeated citation.
+- Default to unobtrusive section-level references, short footnotes/endnotes where supported, or a compact source-range list for a coherent single-source note. Use exact locators when available, without attaching repeated links to every sentence, bullet, code comment, or diagram node. Keep detailed claim mappings in verification records; provide denser visible citations when requested or when a disputed claim needs them.
 - Never fabricate a locator. If extracted text has uncertain pagination, cite the section or omit the locator.
 - For multiple sources, make attribution unambiguous at the point where claims differ or provenance matters.
 - End with a compact source list and, when useful, a coverage statement.
+- Never substitute “see page/slide/link” for explaining the concept, reproducing an in-scope code example, or capturing a worked method. The learner should follow references for verification or further reading, not to recover missing note content.
 
 ## File safety
 
