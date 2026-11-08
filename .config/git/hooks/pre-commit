@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MAX_FILES=50
+MAX_FILE_SIZE=$((100 * 1024 * 1024))  # 100 MiB
+
+# Count all staged changed files
+mapfile -d '' -t staged_files < <(
+    git diff --cached --name-only -z
+)
+
+count=${#staged_files[@]}
+
+if (( count > MAX_FILES )); then
+    echo "Commit rejected - Too many files ($count/$MAX_FILES)"
+    exit 1
+fi
+
+# Check staged file sizes, excluding deletions
+mapfile -d '' -t files < <(
+    git diff --cached --name-only \
+        --diff-filter=ACMRT -z
+)
+
+for file in "${files[@]}"; do
+    size=$(git cat-file -s ":$file")
+
+    if (( size > MAX_FILE_SIZE )); then
+        echo "Commit rejected - File too large: $file"
+        echo "Size: $size bytes"
+        exit 1
+    fi
+done
+
+exit 0
+
