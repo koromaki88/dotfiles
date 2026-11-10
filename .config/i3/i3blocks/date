@@ -1,6 +1,6 @@
 #!/bin/bash
 
-date '+%a %d %b %H:%M'
+date '+%a %d %b %H:%M:%S'
 
 if [ "$BLOCK_BUTTON" == "1" ]; then
   setsid -f gsimplecal >/dev/null 2>&1 </dev/null
