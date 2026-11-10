@@ -181,6 +181,7 @@ sources:
 ```
 
 - Use `[[wikilinks]]` only for notes known to exist or files you are creating as part of the task. Otherwise use ordinary Markdown links or plain text; avoid creating accidental dangling links.
+- Identical filenames in different folders are valid in Obsidian. When a note name is duplicated, use an unambiguous folder-qualified link with a readable display alias, such as `[[System Architecture/Overview|Overview]]`, rather than inventing a filename prefix. Resolve paths against the actual vault structure; do not guess the vault root. Check that generated links, including heading links and index entries, target the intended file.
 - Use Obsidian callouts where they improve scanning:
 
 ```markdown
@@ -291,6 +292,9 @@ When producing `.typ`:
 
 - Do not overwrite existing notes unless the user explicitly asks. Inspect related notes first and preserve their conventions when updating them.
 - Use descriptive filenames. Sanitize only characters that are unsafe for the target filesystem or note system.
+- Use natural, topic-based filenames and note titles. Do not invent course/subject abbreviations, numbered prefixes, sequential note IDs, or matching title/frontmatter prefixes such as `SAD 01`, `SAD 02`, or `CS-001` unless the user requests them or explicit project instructions require that naming convention. An acronym that is genuinely part of the topic name is fine; an artificial organizational prefix is not. Do not infer a required naming scheme merely from IDs in previously generated notes.
+- Prefer meaningful topic/course folders to distinguish note collections. Reusing a descriptive filename in different folders is acceptable; do not add artificial prefixes just to make every basename globally unique. Preserve source chapter/lecture numbering only where it meaningfully identifies the topic, not as an automatic prefix on every note.
+- If a proposed path already exists in the same directory, inspect it first. Follow the user's overwrite/update instructions; otherwise use a meaningful descriptive qualifier or ask when the intended distinction is unclear. Do not overwrite a note, invent a sequential ID, or rename existing notes merely to avoid a collision. Apply the no-invented-prefix rule to new names while preserving existing files and links unless renaming is requested.
 - Keep generated assets beside the note in a predictable assets directory when needed.
 - Do not copy large portions of copyrighted source text verbatim; create transformative notes in your own words while preserving technical accuracy.
 
