@@ -71,6 +71,7 @@ alias fzf-nva='find ~ | nvim $(fzf --preview="bat --color=always {}")' # fzf + n
 alias fzf-tna='thunar $(dirname "$(find ~ | fzf)")' # fzf + thunar
 alias fzf-cda='selected=$(find ~ | fzf --preview="bat --color=always {}"); if [ -d "$selected" ]; then cd "$selected"; else cd "$(dirname "$selected")"; fi' # fzf cd
 node-ts() { tsc --noEmit "$1" && node "$1" }
+mpc-fav() { mpc -f '%file%' current | mpc addplaylist "$1" }
 
 # Load aliases
 if [ -f ~/.bash_aliases ]; then
